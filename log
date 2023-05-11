@@ -14,3 +14,14 @@ Thu 11 May 2023 04:34:49 PM UTC:
  tests:  1|3
 total_score: 10/70
 d47e41d
+Thu 11 May 2023 04:35:11 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:39:7: error: ‘dato’ is a pointer; did you mean to use ‘->’?
+   39 |   dato.size = 0;
+      |       ^
+      |       ->
+Compilation failed
+423b208
