@@ -53,7 +53,7 @@ void heap_pop(Heap* pq){
   pq->heapArray[0] = aux;
   pq->size--;
   if ( pq->capac == 1){
-    pq->capac--;
+    pq->capac = 0;
     return;
   }
   for ( int i = 0 ; i < pq->capac ; i++){
