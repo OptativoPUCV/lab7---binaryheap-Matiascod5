@@ -58,6 +58,7 @@ void heap_pop(Heap* pq){
       aux = pq->heapArray[0];
       pq->heapArray[0] = pq->heapArray[izq];
       pq->heapArray[izq] = aux;
+      pq->size--;
     }
     else{
       aux = pq->heapArray[0];
