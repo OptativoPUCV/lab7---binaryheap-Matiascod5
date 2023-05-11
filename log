@@ -763,3 +763,28 @@ Thu 11 May 2023 05:25:39 PM UTC:
  tests:  7|1
 total_score: 45/70
 8fa2689
+Thu 11 May 2023 05:33:16 PM UTC: 
+ heap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:55:23: error: array subscript is not an integer
+   55 |     if ( pq->heapArray[2i +1] > pq->heapArray[2i + 2]){
+      |                       ^
+heap.c:55:46: error: array subscript is not an integer
+   55 |     if ( pq->heapArray[2i +1] > pq->heapArray[2i + 2]){
+      |                                              ^
+heap.c:57:39: error: array subscript is not an integer
+   57 |       pq->heapArray[0] = pq->heapArray[2i + 1];
+      |                                       ^
+heap.c:58:20: error: array subscript is not an integer
+   58 |       pq->heapArray[2i + 1] = aux;
+      |                    ^
+heap.c:62:39: error: array subscript is not an integer
+   62 |       pq->heapArray[0] = pq->heapArray[2i + 2];
+      |                                       ^
+heap.c:63:20: error: array subscript is not an integer
+   63 |       pq->heapArray[2i + 2] = aux;
+      |                    ^
+Compilation failed
+e9476fa
