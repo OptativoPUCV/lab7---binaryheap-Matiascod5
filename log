@@ -452,3 +452,16 @@ heap.c:34:17: error: ‘size’ undeclared (first use in this function)
 heap.c:34:17: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 637648b
+Thu 11 May 2023 04:59:28 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:34:26: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   34 |   pq->heapArray[pq->size]->data = data;
+      |                          ^~
+heap.c:35:26: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   35 |   pq->heapArray[pq->size]->priority = priority;
+      |                          ^~
+Compilation failed
+ec1819e
