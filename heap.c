@@ -54,6 +54,7 @@ void heap_pop(Heap* pq){
   pq->size--;
   if ( pq->capac == 1){
     pq->capac--;
+    return;
   }
   for ( int i = 0 ; i < pq->capac ; i++){
     int izq = 2i + 1;
