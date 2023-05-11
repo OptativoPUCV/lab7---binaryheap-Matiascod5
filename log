@@ -640,3 +640,16 @@ heap.c:41:24: error: incompatible types when assigning to type ‘heapElem’ {a
       |                        ^~~
 Compilation failed
 bfa71d2
+Thu 11 May 2023 05:11:17 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:40:21: error: incompatible types when initializing type ‘heapElem *’ {aka ‘struct nodo *’} using type ‘heapElem’ {aka ‘struct nodo’}
+   40 |     heapElem* aux = pq->heapArray[(i-1)/2];
+      |                     ^~
+heap.c:41:24: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘heapElem *’ {aka ‘struct nodo *’}
+   41 |     pq->heapArray[i] = aux;
+      |                        ^~~
+Compilation failed
+728c7d8
