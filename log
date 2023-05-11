@@ -42,3 +42,9 @@ heap.c:22:24: error: returning ‘int’ from a function with return type ‘voi
 cc1: all warnings being treated as errors
 Compilation failed
 7d42db1
+Thu 11 May 2023 04:36:59 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|3
+total_score: 10/70
+4cf77a6
