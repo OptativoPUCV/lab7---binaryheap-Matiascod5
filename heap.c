@@ -52,7 +52,7 @@ void heap_pop(Heap* pq){
   aux = pq->heapArray[pq->size - 1];
   pq->heapArray[0] = aux;
   pq->size--;
-  if ( pq->capac == 1){
+  if ( pq->size == 1){
     pq->capac = 0;
     return;
   }
