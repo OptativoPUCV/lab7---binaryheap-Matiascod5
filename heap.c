@@ -52,15 +52,17 @@ void heap_pop(Heap* pq){
   aux = pq->heapArray[pq->size - 1];
   pq->heapArray[0] = aux;
   for ( int i = 0 ; i < pq->capac ; i++){
-    if ( pq->heapArray[2i +1] > pq->heapArray[2i + 2]){
+    int izq = 2i + 1;
+    int der = 2i + 2;
+    if ( pq->heapArray[izq] > pq->heapArray[der]){
       aux = pq->heapArray[0];
-      pq->heapArray[0] = pq->heapArray[2i + 1];
-      pq->heapArray[2i + 1] = aux;
+      pq->heapArray[0] = pq->heapArray[izq];
+      pq->heapArray[izq] = aux;
     }
     else{
       aux = pq->heapArray[0];
-      pq->heapArray[0] = pq->heapArray[2i + 2];
-      pq->heapArray[2i + 2] = aux;
+      pq->heapArray[0] = pq->heapArray[der];
+      pq->heapArray[der] = aux;
     }
   }
   
