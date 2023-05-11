@@ -709,3 +709,15 @@ heap.c:41:24: error: ‘aux’ undeclared (first use in this function)
 heap.c:41:24: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d663e5d
+Thu 11 May 2023 05:13:10 PM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:41:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘aux’
+   41 |     aux = pq->heapArray[(i-1)/2];
+      |     ^~~
+heap.c:41:5: error: ‘aux’ undeclared (first use in this function)
+heap.c:41:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6d0a98d
