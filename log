@@ -93,3 +93,17 @@ heap.c:23:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 0b72117
+Thu 11 May 2023 04:38:27 PM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:27: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   21 |    return pq->heapArray[0]->data;
+      |                           ^~
+heap.c:22:1: error: control reaches end of non-void function [-Werror=return-type]
+   22 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2eb4504
