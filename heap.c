@@ -56,13 +56,13 @@ void heap_pop(Heap* pq){
     int izq = 2i + 1;
     int der = 2i + 2;
     if ( pq->heapArray[izq].priority > pq->heapArray[der].priority){
-      aux = pq->heapArray[0];
-      pq->heapArray[0] = pq->heapArray[izq];
+      aux = pq->heapArray[i];
+      pq->heapArray[i] = pq->heapArray[izq];
       pq->heapArray[izq] = aux;
     }
     else{
-      aux = pq->heapArray[0];
-      pq->heapArray[0] = pq->heapArray[der];
+      aux = pq->heapArray[i];
+      pq->heapArray[i] = pq->heapArray[der];
       pq->heapArray[der] = aux;
     }
   }
