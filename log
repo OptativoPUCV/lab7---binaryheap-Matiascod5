@@ -563,3 +563,27 @@ heap.c:40:24: error: incompatible types when assigning to type ‘heapElem’ {a
       |                        ^~~
 Compilation failed
 a9987d3
+Thu 11 May 2023 05:10:06 PM UTC: 
+ heap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:33:77: error: expected ‘)’ before ‘;’ token
+   33 |     pq->heapArray = realloc( pq->heapArray, sizeof( heapElem) * (pq->capac );
+      |                                                                             ^
+      |                                                                             )
+heap.c:33:78: error: expected ‘;’ before ‘}’ token
+   33 |     pq->heapArray = realloc( pq->heapArray, sizeof( heapElem) * (pq->capac );
+      |                                                                              ^
+      |                                                                              ;
+   34 | 
+   35 |   }
+      |   ~                                                                           
+heap.c:40:16: error: invalid initializer
+   40 |     Heap aux = pq->heapArray[(i-1)/2];
+      |                ^~
+heap.c:41:24: error: incompatible types when assigning to type ‘heapElem’ {aka ‘struct nodo’} from type ‘Heap’ {aka ‘struct Heap’}
+   41 |     pq->heapArray[i] = aux;
+      |                        ^~~
+Compilation failed
+25eadc2
