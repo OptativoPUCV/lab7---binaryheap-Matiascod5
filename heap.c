@@ -22,7 +22,7 @@ void* heap_top(Heap* pq){
     return NULL;
   }
   else{
-    return pq->heapArray[0]->priority;
+    return pq->heapArray[0].priority;
   }
 }
 
